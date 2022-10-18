@@ -8,12 +8,9 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.list = @list
-    if @bookmark.save
-      redirect_to list_path(@list)
-    else
-      render :new
-    end
+    @bookmark.list_id = @list.id
+    @bookmark.save!
+    redirect_to list_path(@list)
   end
 
   def destroy
