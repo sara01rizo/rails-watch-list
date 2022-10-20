@@ -10,7 +10,9 @@
     <h3>My Lists</h3>
     <%= link_to "Create a movie list", new_list_path, class: "btn btn-success" %>
   </div>
-  <div class="row">
+</div>
+
+<div class="wrapper">
     <% @lists.each do |list| %>
     <%= link_to list_path(list) do %>
     <% if list.photo.attached?  %>
@@ -22,9 +24,21 @@
         <% end %>
       <%end %>
   <% end %>
+</div>
+
+<br/>
+<hr/>
+
+<div class="card-trip">
+  <%= cl_image_tag("sample", width: 60, height: 60, crop: :fill) %>
+  <div class="card-trip-infos">
+    <div>
+      <h2>Title</h2>
+      <p>Read more!</p>
+    </div>
   </div>
 </div>
-</div>
+
 
 <div class="starWars"></div>
 

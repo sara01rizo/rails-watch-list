@@ -8,6 +8,14 @@
 
 a {
   text-decoration: none;
+  color: #282828;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 2px solid yellowgreen;
 }
 
 .starWars {
